@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Cancelled</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #d9534f; border-bottom: 2px solid #eee; padding-bottom: 10px;">Important: Event Cancelled</h2>
+
+    <p>Dear <span th:text="${name}">Volunteer</span>,</p>
+
+    <p>We regret to inform you that <strong><span th:text="${eventName}">Event Name</span></strong> scheduled for <span th:text="${eventDate}">Date</span> has been <strong>cancelled</strong>.</p>
+
+    <p>We apologize for the inconvenience.</p>
+
+    <p style="font-size: 12px; color: #777; margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px;">
+        Volunteer Management System Support
+    </p>
+</div>
+</body>
+</html>

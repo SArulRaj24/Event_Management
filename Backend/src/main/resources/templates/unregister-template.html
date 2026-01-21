@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Update</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; color: #333;">
+<div style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2 style="color: #555; border-bottom: 2px solid #eee; padding-bottom: 10px;">Registration Withdrawn</h2>
+
+    <p>Hi <span th:text="${name}">Volunteer</span>,</p>
+
+    <p>This email confirms that you have unregistered from the event: <strong><span th:text="${eventName}">Event Name</span></strong>.</p>
+
+    <p>We hope to see you at a future event.</p>
+
+    <p style="font-size: 12px; color: #777; margin-top: 30px; border-top: 1px solid #eee; padding-top: 10px;">
+        Volunteer Management System
+    </p>
+</div>
+</body>
+</html>
