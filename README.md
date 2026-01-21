@@ -1,100 +1,125 @@
-Event Management System
-A comprehensive web application for managing community events, designed to connect Organizers with Volunteers. This project features a Spring Boot backend and a React (Vite) frontend, providing real-time event tracking, automated email notifications, and detailed analytics.
+# Event Management System
 
-🚀 Features
-For Organizers
-Event Lifecycle Management: Create, update, and delete events with automated notifications to all registered participants.
+A comprehensive, community-driven web platform that connects **event organizers** with **volunteers**. The system simplifies event creation, volunteer registration, participation tracking, and communication through automated workflows and analytics.
 
-Participant Tracking: View real-time lists of registered volunteers and track actual event attendance via check-ins.
+---
 
-Analytics Dashboard: Access detailed insights including registration trends over time and capacity utilization.
+## 📌 Overview
 
-Automated Communication: Automatically notify volunteers about event registrations, cancellations, or upcoming reminders.
+The Event Management System enables organizers to efficiently manage community events while providing volunteers with an intuitive way to discover, register, and participate in events. The platform supports secure role-based access, automated email notifications, and real-time insights to ensure smooth event execution.
 
-For Volunteers
-Event Discovery: Browse upcoming, ongoing, and completed events.
+---
 
-Registration System: Easily register for or withdraw from events.
+## 🚀 Features
 
-Self Check-in: Securely check into events they are attending.
+### 👤 For Organizers
+- **Event Management**  
+  Create, update, view, and delete community events with full CRUD support.
 
-Profile Management: Update personal details and reset passwords securely.
+- **Volunteer Tracking**  
+  Real-time access to registered volunteers and confirmed participants.
 
-System Capabilities
-Automated Reminders: A background scheduler sends email alerts 3 days before, 1 day before, and on the day of an event.
+- **Event Analytics**  
+  Visual dashboards displaying registration trends and capacity utilization.
 
-Email Templating: Professional HTML emails for registrations, cancellations, and reminders powered by Thymeleaf.
+- **Automated Notifications**  
+  Email alerts for new volunteer registrations and volunteer withdrawals.
 
-Secure Authentication: Session-based authentication with role-based access control (RBAC).
+---
 
-🛠️ Tech Stack
-Backend
-Framework: Spring Boot 4.0.0
+### 🤝 For Volunteers
+- **Event Discovery**  
+  Browse and filter events by status: upcoming, ongoing, or completed.
 
-Language: Java 21
+- **Easy Registration**  
+  Register for events or withdraw seamlessly when plans change.
 
-Database: MySQL with Spring Data JPA
+- **Check-in System**  
+  Simple self check-in during event participation.
 
-Communication: Spring Mail & Thymeleaf
+- **Feedback & Ratings**  
+  Submit ratings and feedback to help organizers improve future events.
 
-Utilities: Lombok for boilerplate reduction
+---
 
-Frontend
-Framework: React 19 with Vite
+### ⚙️ System-Wide Capabilities
+- **Automated Email Reminders**  
+  Scheduler sends reminders:
+  - 3 days before the event  
+  - 1 day before the event  
+  - On the event day
 
-Styling: Tailwind CSS
+- **Secure Authentication**  
+  Session-based login with role-based access control for Organizers and Volunteers.
 
-State Management: React Context API (AuthContext)
+- **Responsive User Interface**  
+  Modern and interactive UI optimized for all screen sizes.
 
-Icons & UI: Lucide React & Framer Motion
+---
 
-Data Visualization: Recharts for analytics
+## 🛠️ Tech Stack
 
-📂 Project Structure
-Backend
-Controllers: REST endpoints for user and event management.
+### Backend
+- **Framework:** Spring Boot 4.0.0  
+- **Language:** Java 21  
+- **Database:** MySQL with Spring Data JPA  
+- **Email Templating:** Thymeleaf  
+- **Utilities:** Lombok  
 
-Services: Core business logic, including registration flows and email triggers.
+---
 
-Scheduler: Automated tasks for sending event reminders.
+### Frontend
+- **Framework:** React 19 (Vite)  
+- **Styling:** Tailwind CSS  
+- **Animations:** Framer Motion  
+- **Charts & Analytics:** Recharts  
+- **Routing:** React Router DOM  
 
-DTOs: Data Transfer Objects for structured API communication.
+---
 
-Frontend
-Pages: Login, Register, Dashboard, Create/Edit Event, Event Details, and Profile.
+## 📂 Project Structure
 
-Context: Centralized authentication state management.
+### Backend
 
-Components: Reusable UI elements like the Navigation Bar.
+controller/ - REST APIs for events and user operations
+service/ - Business logic, registration flow, and email handling
+scheduler/ - Cron jobs for automated email reminders
+model/ - JPA entities (Users, Events, Registrations)
 
-🔧 Getting Started
-Prerequisites
-Java 21 or higher
 
-Node.js (latest LTS recommended)
+### Frontend
+src/pages/ - Application pages (Dashboard, Event Details, Profile)
+src/context/ - Authentication and role management
+src/api/ - Axios configuration for backend communication
 
-MySQL Database
 
-Backend Setup
-Navigate to the Backend directory.
+---
 
-Configure your database and mail server in src/main/resources/application.properties.
+## 🔧 Getting Started
 
-Run the application using Maven:
+### Prerequisites
+- Java 21 or higher  
+- Node.js  
+- MySQL  
 
-Bash
+---
 
+### Backend Setup
+1. Navigate to the backend directory.
+2. Configure database and SMTP credentials in:
+
+src/main/resources/application.properties
+
+3. Run the application:
+```bash
 ./mvnw spring-boot:run
+
 Frontend Setup
-Navigate to the Frontend directory.
+
+Navigate to the frontend directory.
 
 Install dependencies:
-
-Bash
-
 npm install
-Start the development server:
 
-Bash
-
+Start the development server
 npm run dev
